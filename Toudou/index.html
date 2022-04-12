@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>TodoListe JS</title>
+    </head>
+    <body>
+        <h1>TodoListe JS</h1>
+        
+        <!-- Liste des Todos -->
+        <ol></ol>
+        
+        <!-- Bouton pour afficher la liste -->
+        <button onclick="gestionnaires.afficherTodos()">Afficher la liste</button>
+        
+        <!-- Bouton pour cocher/décocher les états de complétion -->
+        <button onclick="gestionnaires.cocherDecocherTout()">Cocher/Décocher</button>
+        
+        <!-- Section ajouter Todo -->
+        <div>
+            <input id="champAjouter" type="text" placeholder="Ajouter une todo"/>
+            <button onclick="gestionnaires.ajouterTodo()">Ajouter</button>
+        </div>
+        
+        <!-- Section Modifier Todo -->
+        <div>
+            <input id="champModifierTodoPosition" type="number" placeholder="Position de todo à modifier"/>
+            <input id="champModifierTodoTexte" type="text" placeholder="Nouveau texte de todo"/>
+            <button onclick="gestionnaires.modifierTodo()">Modifier</button>
+        </div>
+        
+        <!-- Section Delete Todo 
+        <div>
+            <input id="champSupprimerTodoPosition" type="number" placeholder="Position de todo à supprimer"/>
+            <button onclick="gestionnaires.supprimerTodo()">Supprimer</button>
+        </div>-->
+        
+        <!-- Section Cocher/Décocher Todo -->
+        <div>
+            <input id="champCocherDecocherCompletionTodoPosition" type="number" placeholder="Position de todo à cocher/décocher"/>
+            <button onclick="gestionnaires.cocherDecocherTodo()">Cocher/Décocher</button>
+        </div>
+        
+        <!-- Section Tout mettre à vrai -->
+        <div>
+            <button onclick="gestionnaires.toutMettreAVrai()">ToutMettreAVrai</button>
+        </div>
+        
+        <!-- Section Supprimer tâches complétées -->
+        <div>
+            <button onclick="gestionnaires.supprimerTachesCompletees()">Supprimer les tâches complétées</button>
+        </div>
+        
+        <!-- Section Valider puis Supprimer Todo -->
+        <div>
+            <input id="champValiderPuisSupprimerTodoPosition" type="number" placeholder="Position de todo à valider puis supprimer"/>
+            <button onclick="gestionnaires.validerPuisSupprimerTodo()">Valider puis supprimer</button>
+        </div>
+        
+        <!-- Section Rechercher Todo -->
+        <div>
+            <input id="champRechercherTodo" type="text" placeholder="Todo à rechercher"/>
+            <button onclick="gestionnaires.rechercherTodo()">Rechercher</button>
+            <br/><p id="resultatRecherche"></p>
+        </div>
+        
+        <!-- Inclure le JS -->
+        <script src="todoliste-v11.js"></script>
+    </body>
+</html>
